@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROX Alım-Satım</title>
+    <link rel="stylesheet" href="rox.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="rox_logo.png" alt="ROX Logo" class="logo">
+            <h1>Hoş Geldiniz RodCYREX.</h1>
+        </div>
+        <div class="content">
+            <div class="history">
+                <h2>İşlem Geçmişi</h2>
+                <div id="history" class="history-content">
+                    <!-- İşlem geçmişi burada listelenecek -->
+                </div>
+                <button onclick="resetHistory()">Geçmişi Sıfırla</button>
+            </div>
+            <div class="inputs">
+                <label for="satinalim">Satın Alım</label>
+                <input type="number" id="satinalim" name="satinalim">
+                
+                <label for="satis">Satış</label>
+                <input type="number" id="satis" name="satis">
+                
+                <button onclick="addTransaction()">Ekle</button>
+
+                <h2>Toplam Kazanç</h2>
+                <p id="kazanc">0 TL</p>
+                
+                <label for="currency">Para Birimi</label>
+                <select id="currency" onchange="updateCurrency()">
+                    <option value="TL" selected>TL</option>
+                    <option value="USD">Dolar</option>
+                    <option value="RUB">Ruble</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="rox.js"></script>
+</body>
+</html>
